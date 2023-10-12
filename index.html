@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login #2 | Cl1ck Site</title>
+</head>
+<body>
+
+    <div class="login">
+        <img src="image.png" alt="">
+        <h3>Welcome Back!</h3>
+        <h2>King Cl1ck</h2>
+        <form class="login-form" onsubmit="checkPassword(event)">
+            <input type="password" id="password" placeholder="Enter your passcode">
+            <button type="submit">LOGIN</button>
+            <a href="Yr.html">Forget your passcode?</a>
+        </form>
+    </div>
+
+    <script>
+        function checkPassword(event) {
+            event.preventDefault();
+            var password = document.getElementById("password").value;
+            if (password === "3483") {
+                window.location.href = "https://bit.ly/TDH_Company"; // Перенаправление на https://bit.ly/TDH_Company
+            } else {
+                alert("Неверный пароль. Попробуйте снова.");
+            }
+        }
+    </script>
+</body>
+</html>
